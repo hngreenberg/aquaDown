@@ -19,7 +19,7 @@ Plant.init(
       type: DataTypes.STRING,
       allowNull: true
     },
-    watering: {
+    watering: { // from api
       type: DataTypes.STRING,
       allowNull: true
     },
