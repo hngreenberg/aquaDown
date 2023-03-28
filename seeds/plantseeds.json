@@ -1,6 +1,5 @@
 [
     {
-        "id": "1",
         "common_name": "rose",
         "nickname": "Rambling Rose",
         "sunlight": "true",
@@ -10,7 +9,6 @@
         "date_lastfed": "07/12/2023"
     },
     {
-        "id": "2",
         "common_name": "ivy",
         "nickname": "Poison Ivy",
         "sunlight": "true",

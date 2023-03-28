@@ -34,6 +34,7 @@ router.delete('/', withAuth, async (req, res) => {
   }
 });
 
+//Create new user
 router.post('/', async (req, res) => {
   try {
     const userData = await User.create(req.body);
@@ -49,6 +50,7 @@ router.post('/', async (req, res) => {
   }
 });
 
+//Validates user login information to continue session
 router.post('/login', async (req, res) => {
   try {
     const userData = await User.findOne({ where: { email: req.body.email } });
@@ -81,6 +83,7 @@ router.post('/login', async (req, res) => {
   }
 });
 
+//Terminates user session and logs out
 router.post('/logout', (req, res) => {
   if (req.session.logged_in) {
     req.session.destroy(() => {
