@@ -15,6 +15,10 @@ Plant.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    nickname: { // from user
+      type: DataTypes.STRING,
+      allowNull: true
+    },
     sunlight: { // from api
       type: DataTypes.STRING,
       allowNull: true
@@ -23,20 +27,15 @@ Plant.init(
       type: DataTypes.STRING,
       allowNull: true
     },
-    date_created: { // from utils helper 
-      type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: DataTypes.NOW,
-    },
-    date_acquired: {
+    date_acquired: { // from user
       type: DataTypes.DATE,
       allowNull: true,
     },
-    date_lastwatered: {
+    date_lastwatered: { // from user
       type: DataTypes.DATE,
       allowNull: false
     },
-    date_lastfed: {
+    date_lastfed: { // from user
       type: DataTypes.DATE,
       allowNull: true
     },
