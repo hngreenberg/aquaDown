@@ -2,19 +2,30 @@ const router = require('express').Router();
 const { Plant } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+//Find all plants
+router.get('/', withAuth, async (req, res) => {
+  try {
+    const plantData = await Plant.findAll();
+  } catch (err) {
+    res.status(404).json(err);
+  }
+});
+
+//Create new plant
 router.post('/', withAuth, async (req, res) => {
   try {
     const newPlant = await Plant.create({
       ...req.body,
       user_id: req.session.user_id,
     });
-
+    console.log(newPlant);
     res.status(200).json(newPlant);
   } catch (err) {
     res.status(400).json(err);
   }
 });
 
+//Delete plant
 router.delete('/:id', withAuth, async (req, res) => {
   try {
     const plantData = await Plant.destroy({
