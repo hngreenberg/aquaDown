@@ -28,6 +28,15 @@
       </nav>
     </header>
     <main class="container container-fluid mt-5">
+      <div class="searchboxdiv" id="searchfunction">
+        <div>
+          <h4>What plant are we looking for?</h4>
+          <input type="text" class="searchInput" id="searchPlant" placeholder="Common Plant Name:">
+        </div>
+        <div>
+          <button type="submit" class="plantSearchBtn" id="plantBtn">Find my Plant!</button>
+        </div>
+      </div>
       <!-- Render the sub layout -->
       {{{ body }}}
     </main>
@@ -40,6 +49,7 @@
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
+  <script src="/js/plant.js"></script>
 </body>
 
 </html>
