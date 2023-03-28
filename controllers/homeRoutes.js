@@ -2,6 +2,23 @@ const router = require('express').Router();
 const { Plant, User } = require('../models');
 const withAuth = require('../utils/auth');
 
+const dotenv = require("dotenv");
+dotenv.config();
+
+router.get("/search", async (req, res) => {
+  const plantSearch = req.query.q
+  console.log(plantSearch)
+  try {
+    const response = await fetch('https://perenual.com/api/species-list?page=1&key=' + process.env.API_KEY + '&q=' + plantSearch)
+
+    const plantData = await response.json();
+    console.log(plantData)
+    res.json(plantData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+})
+
 router.get('/', async (req, res) => {
   try {
     // Get all plants and JOIN with user data
