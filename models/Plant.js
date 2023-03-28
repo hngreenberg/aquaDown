@@ -8,6 +8,7 @@ Plant.init(
   {
     id: { // from api
       type: DataTypes.INTEGER,
+      autoIncrement: true,
       allowNull: false,
       primaryKey: true
     },
