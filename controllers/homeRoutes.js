@@ -13,7 +13,8 @@ router.get("/search", async (req, res) => {
 
     const plantData = await response.json();
     console.log(plantData)
-    res.json(plantData);
+    res.render("results", plantData)
+    // res.json(plantData); 
   } catch (err) {
     res.status(500).json(err);
   }
