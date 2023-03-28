@@ -1,9 +1,8 @@
-{{!-- how do i make a for loop to loop through my api data and render
-parts of the data? --}}
-
 {{#each data}}
 <div>
-    <h2>Common Name Here</h2>
-    <p>{{common_name}}</p>
+    <h2>{{common_name}}</h2>
+    <p>This plant requires "{{watering}}" watering.</p>
+    <p>This plant requires "{{sunlight}}" sunlight.</p>
+    <img="{{default_image}}">
 </div>
 {{/each}}
