@@ -1,3 +1,10 @@
+
+:root {
+  --primary-color: #1b89bc;
+  --hover-color: #e3e60d;
+}
+
+
 header,
 .project:not(:last-child) {
   border-bottom: 1px solid #ccc;
@@ -41,12 +48,195 @@ header,
 
 #logBody {
   background: linear-gradient(to bottom, #e6f7ff, #c9e2f7, #a6c3f4);
-  ;
   border-radius: 10px;
   padding: 20px;
   width: 100%;
+}
+/* end login template */
+
+/* ---- slide-show css ----*/
+.slide-back {
+background-color:#1b89bc;
+box-shadow: 0 0 20px rgba(6, 91, 131, 30);
+border-radius: 10px;
 
 }
+
+#slideshow-img {
+  height: 35vw;
+  width: 75vw;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: rgb(242, 245, 245);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+  display: block;
+  margin: 20px auto;
+  transform: translateY(20px) scale(1);
+}
+
+#slideshow-img2 {
+  animation: glow 4s ease-in-out infinite;
+  height: 15vw;
+  width: 70vw;
+  border-radius: 100px;
+  padding: 10px;
+  background-color: rgb(245, 242, 245);
+  filter: invert(0) drop-shadow(0 0 3px rgb(249, 246, 246));
+  display: block;
+  margin: 20px auto;
+  transform: translateY(20px) scale(1);
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(232, 233, 236, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 50px 15px rgba(19, 19, 20, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgb(231, 225, 225);
+  }
+}
+
+/* end slideshow css */
+
+/* plant results images styles */
+#result-image-div {
+  padding: 20px;
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(2, 0, 0, 0.9);
+}
+
+#results-images {
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(215, 210, 210, 0.505);
+  /* border: 2pxp solid rgb(222, 219, 219); */
+  padding: 2px;
+}
+
+/* plant.handlebars styles */
+#addPlantProfile {
+  background-color: var(--primary-color);
+  box-shadow: 0 0 10px rgba(2, 0, 0, 0.9);
+  padding: 50px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+#plant-hndl-img {
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(4, 4, 4, 0.505);
+  padding: 10px;
+  background-color: #eef3f3;
+  height: 35vw;
+  margin: 10px;
+}
+
+/* Profile.handlbars styles */
+#name-banner {
+  background-color: var(--primary-color);
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  height: 5vw;
+  margin-top: 3vw;
+  box-shadow: 0 0 20px rgba(4, 4, 4, 0.505);
+  text-align: center;
+}
+
+.name-color {
+  color: white;
+  font-size: 4vw;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px #000;
+}
+
+#name-banner h2 {
+  font-size: 3vw;
+  display: inline-block;
+}
+
+#name-banner .col-auto {
+  height: 100%;
+  text-align: center;
+}
+
+/* exclamation bounce */
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(1);
+  }
+}
+
+.bounce {
+  display: inline-block;
+  animation: bounce 1s ease infinite;
+  font-size: 3.5vw;
+  padding-left: 3px;
+}
+
+/* crrent plants: styles */
+.h3-color {
+  color: white;
+  font-size: 3vw;
+  margin: 2%px;
+  padding: 2%;
+}
+
+#whiteline {
+  height: 1px;
+  width: 70vw;
+  background-color: white;
+  margin-top: 50px;
+}
+
+#crrnt-plants-list {
+  display: flex;
+  justify-content: center;
+  background-color: var(--primary-color);
+  margin-top: 4vw;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(4, 4, 4, 0.505);
+  padding: 10px;
+}
+
+#plantId-color {
+  color: white;
+  text-decoration: none;
+  width: 50vw;
+}
+
+#plantId-color:hover {
+  color: var(--hover-color);
+  font-size: 32px;
+  text-shadow: 2px 2px 5px #070707, -2px -2px 20px #f8f5f5;
+}
+
+#plantId-color:active {
+  margin-left: 1px 1px 0;
+  box-shadow: 1px 1px 3px 1px #f3f0f0;
+   border-radius: 5px;
+   padding: 5px;
+   background-color: rgba(249, 249, 249, 0.51);
+}
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Profile.handlbars styles END */
+
 
 body {
   font-family: 'Aquadown', sans-serif;
@@ -177,3 +367,4 @@ footer {
 .delete-button {
   background-color: #F44336;
 }
+
