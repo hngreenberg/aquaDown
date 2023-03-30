@@ -6,7 +6,7 @@ const withAuth = require('../../utils/auth');
 router.get('/', withAuth, async (req, res) => {
   try {
     const plantData = await Plant.findAll({
-      where: {user_id: req.session.user_id}
+      where: { user_id: req.session.user_id }
     });
     res.status(200).json(plantData);
   } catch (err) {
@@ -24,7 +24,7 @@ router.get('/:id', withAuth, async (req, res) => {
       }
     });
     if (!plantData) {
-      res.status(404).json({message: 'Plant not found'});
+      res.status(404).json({ message: 'Plant not found' });
       return;
     }
     res.status(200).json(plantData);
@@ -36,13 +36,15 @@ router.get('/:id', withAuth, async (req, res) => {
 //Create new plant
 router.post('/', withAuth, async (req, res) => {
   try {
+    console.log(req.body)
     const newPlant = await Plant.create({
       ...req.body,
       user_id: req.session.user_id,
-    });
+    })
     console.log(newPlant);
     res.status(200).json(newPlant);
   } catch (err) {
+    console.log(err);
     res.status(400).json(err);
   }
 });
@@ -51,14 +53,14 @@ router.post('/', withAuth, async (req, res) => {
 //update plant with user in session
 router.put('/:id', withAuth, async (req, res) => {
   try {
-  const plantData = await Plant.update(req.body, {
-    where: { id: req.params.id },
-  })
-  res.status(200).json(plantData);
-} catch (err) {
-  console.log(err);
-  res.status(500).json(err);
-}
+    const plantData = await Plant.update(req.body, {
+      where: { id: req.params.id },
+    })
+    res.status(200).json(plantData);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
 });
 
 //Delete plant
