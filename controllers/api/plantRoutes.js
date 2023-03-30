@@ -36,8 +36,8 @@ router.get('/:id', withAuth, async (req, res) => {
 //Create new plant
 router.post('/', withAuth, async (req, res) => {
   try {
-    console.log(req.body)
     const newPlant = await Plant.create({
+
       ...req.body,
       user_id: req.session.user_id,
     })

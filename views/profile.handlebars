@@ -6,23 +6,27 @@
 
 <div id="crrnt-plants-list">
   {{#if plants.length}}
+
   <div class="col-md-6 project-list">
     <h3 class="h3-color">My Current Plants:</h3>
 
+
     <!-- Loop over each object in the plants array -->
     {{#each plants as |plant| }}
-    <div class="row mb-4 plant">
-      <div class="col-md-5">
+    <div class="row mb-10 plant">
+      <div class="col-md-6">
         <h2>
           {{{get_emoji}}}
           {{!-- when i click on the plant nickname, i want to go to the plant.handlebar with the plant.id --}}
-          <a id="plantId-color" href="/plant/{{plant.id}}">{{plant.nickname}}</a>
+          <a id="plantId-color" href="/plant/{{plant.plant_id}}">{{plant.nickname}}</a>
+          <p id="iDPlant" hidden="true">{{plant_id}}</p>
         </h2>
         <p>This plant was last watered on: {{plant.date_lastwatered}}</p>
         <p>This plant last had plant food on: {{plant.date_lastfed}}</p>
         <p>I got this plant on: {{plant.date_acquired}}</p>
+        <button id="careME" data-id="{{plant.id}}">Cared For!</button>
       </div>
-      <div class="col-md-7">
+      <div class="col-md-6">
         <h3>Commonly Known Name: {{plant.common_name}}</h3>
         <p> <span>☀️</span>
           Amount of Sunlight needed: {{plant.sunlight}}</p>
