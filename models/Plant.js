@@ -9,7 +9,12 @@ Plant.init(
     id: { // from api
       type: DataTypes.INTEGER,
       allowNull: false,
-      primaryKey: true
+      primaryKey: true,
+      autoIncrement: true
+    },
+    plant_id: {
+      type: DataTypes.STRING,
+      allowNull: false
     },
     common_name: { // from api
       type: DataTypes.STRING,
@@ -28,15 +33,15 @@ Plant.init(
       allowNull: true
     },
     date_lastwatered: { // from user
-      type: DataTypes.DATE,
+      type: DataTypes.STRING,
       allowNull: false
     },
     date_lastfed: { // from user
-      type: DataTypes.DATE,
+      type: DataTypes.STRING,
       allowNull: true
     },
     date_acquired: { // from user
-      type: DataTypes.DATE,
+      type: DataTypes.STRING,
       allowNull: true,
     },
     user_id: {

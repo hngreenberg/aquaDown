@@ -11,7 +11,7 @@ function findPlants(event) {
     document.location.href = "/search?q=" + searchPlant
 }
 
-plantBtn.addEventListener("click", findPlants);
+plantBtn?.addEventListener("click", findPlants);
 
 for (i = 0; i < plantInfoBtns.length; i++) {
     plantInfoBtns[i].addEventListener("click", function () {
@@ -34,10 +34,13 @@ const addPlant = async (event) => {
 
     if (plantWater) {
         console.log(plantID)
-        const response = await fetch(("/plant/" + plantID), {
+        const response = await fetch("/api/plants/", {
             method: "POST",
+            headers: {
+                'Content-Type': 'application/json',
+            },
             body: JSON.stringify({
-                id: plantID,
+                plant_id: plantID,
                 common_name: commonName,
                 watering: waterInfo,
                 sunlight: sunlightInfo,
@@ -52,18 +55,18 @@ const addPlant = async (event) => {
             document.location.replace('/profile');
         } else {
             alert('Failed to add plant to profile!');
-            console.log(err)
+            console.log(response)
         }
     }
 }
 
-addPlantProfile.addEventListener("submit", addPlant); // search for form and submit on enter
+addPlantProfile?.addEventListener("submit", addPlant); // search for form and submit on enter
 
 const delButtonHandler = async (event) => {
     if (event.target.hasAttribute('data-id')) {
         const id = event.target.getAttribute('data-id');
 
-        const response = await fetch(`/api/plant/${id}`, {
+        const response = await fetch(`/api/plants/${id}`, {
             method: 'DELETE',
         });
 
@@ -75,17 +78,17 @@ const delButtonHandler = async (event) => {
     }
 };
 
-killedPlant.addEventListener("click", delButtonHandler)
+killedPlant?.addEventListener("click", delButtonHandler)
 
 var slideshowImages = [
-    "/public/images/slideshow/bamboo-palm.jpeg",
-    "/public/images/slideshow/black-rose.jpeg",
-    "/public/images/slideshow/clematis.jpeg",
-    "/public/images/slideshow/gold-cactus.jpeg",
-    "/public/images/slideshow/passion-fruit.jpeg",
-    "/public/images/slideshow/pothos.jpeg",
-    "/public/images/slideshow/succulents.jpeg",
-    "/public/images/slideshow/violet.jpeg"
+    "/images/slideshow/bamboo-palm.jpeg",
+    "/images/slideshow/black-rose.jpeg",
+    "/images/slideshow/clematis.jpeg",
+    "/images/slideshow/gold-cactus.jpeg",
+    "/images/slideshow/passion-fruit.jpeg",
+    "/images/slideshow/pothos.jpeg",
+    "/images/slideshow/succulents.jpeg",
+    "/images/slideshow/violet.jpeg"
 ];
 var currentSlide = 0;
 

@@ -1,5 +1,6 @@
 [
     {
+        "plant_id": "1",
         "common_name": "rose",
         "watering": "often",
         "sunlight": "true",
@@ -9,6 +10,7 @@
         "date_acquired": "07/12/2023"
     },
     {
+        "plant_id": "2",
         "common_name": "ivy",
         "watering": "maximum",
         "sunlight": "true",

@@ -5,7 +5,7 @@
 </div>
 
 <div>
-  {{#if plant.length}}
+  {{#if plants.length}}
   <div class="col-md-6 project-list">
     <h3>My Current Plants:</h3>
 
@@ -18,9 +18,9 @@
           {{!-- when i click on the plant nickname, i want to go to the plant.handlebar with the plant.id --}}
           <a href="/plant/{{plant.id}}">{{plant.nickname}}</a>
         </h2>
-        <p>This plant was last watered on: {{format_date plant.date_lastwatered}}</p>
-        <p>This plant last had plant food on: {{format_date plant.date_lastfed}}</p>
-        <p>I got this plant on: {{format_date plant.date_acquired}}</p>
+        <p>This plant was last watered on: {{plant.date_lastwatered}}</p>
+        <p>This plant last had plant food on: {{plant.date_lastfed}}</p>
+        <p>I got this plant on: {{plant.date_acquired}}</p>
       </div>
       <div class="col-md-7">
         <h3>Commonly Known Name: {{plant.common_name}}</h3>
