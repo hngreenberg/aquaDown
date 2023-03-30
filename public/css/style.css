@@ -1,7 +1,11 @@
+
+
 header,
 .project:not(:last-child) {
   border-bottom: 1px solid #ccc;
+  
 }
+
 
 .no-button {
   background: none;
@@ -16,4 +20,31 @@ header,
 .no-button:hover {
   color: #065b83;
   text-decoration: underline;
+}
+/* log in template css */
+#logInBtn {
+  text-decoration: none;
+  color: rgba(5, 5, 5, 0.8);
+  background-color: transparent;
+  padding: 15px 40px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+  font-size: 18px;
+}
+
+#logInBtn:hover {
+  color: rgb(22, 184, 101);
+  box-shadow: 0 5px 15px rgba(13, 13, 13, 0.699);
+  background-color: white;
+  
+}
+
+#logBody {
+  background: linear-gradient(to bottom, #e6f7ff, #c9e2f7, #a6c3f4);;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+
 }
