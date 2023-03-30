@@ -37,6 +37,22 @@ router.get("/plant/:id", async (req, res) => {
   }
 })
 
+router.get("/update/:id", async (req, res) => {
+
+  const plantID = req.params.id
+  console.log(plantID)
+  try {
+    const response = await fetch('https://perenual.com/api/species/details/' + plantID + '?key=' + process.env.API_KEY)
+
+    const plantLookup = await response.json();
+    console.log(plantLookup);
+    res.render("update", plantLookup)
+
+  } catch (err) {
+    res.status(500).json(err);
+  }
+})
+
 router.get('/', async (req, res) => {
   try {
     // Get all plants and JOIN with user data

@@ -1,7 +1,9 @@
 var plantBtn = document.getElementById("plantBtn");
 var plantInfoBtns = document.querySelectorAll(".plantInfo");
 var addPlantProfile = document.querySelector("#addPlantProfile");
-var killedPlant = document.querySelector("#killME")
+var killedPlant = document.querySelector("#killME");
+var plantCare = document.querySelector("#careME");
+var updatePlant = document.querySelector("#updatePlant");
 
 function findPlants(event) {
     event.preventDefault();
@@ -61,6 +63,44 @@ const addPlant = async (event) => {
 }
 
 addPlantProfile?.addEventListener("submit", addPlant); // search for form and submit on enter
+
+function carePlant() {
+    const plantID = document.querySelector("#iDPlant").textContent;
+    console.log(plantID)
+    document.location.href = "/update/" + plantID
+}
+
+plantCare?.addEventListener("click", carePlant);
+
+const changePlant = async (event) => {
+    event.preventDefault();
+
+    const plantID = document.querySelector("#iDPlant").textContent;
+    const nickname = document.querySelector("#nickPlant").value.trim();
+    const plantWater = document.querySelector("#waterPlant").value.trim();
+    const plantFood = document.querySelector("#foodPlant").value.trim();
+
+    const response = await fetch("/api/plants/" + plantID, {
+        method: "PUT",
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            nickname: nickname,
+            date_lastwatered: plantWater,
+            date_lastfed: plantFood
+        })
+    })
+
+    if (response.ok) {
+        document.location.replace('/profile');
+    } else {
+        alert('We failed to write that down!');
+        console.log(response)
+    }
+}
+
+updatePlant?.addEventListener("submit", changePlant);
 
 const delButtonHandler = async (event) => {
     if (event.target.hasAttribute('data-id')) {
