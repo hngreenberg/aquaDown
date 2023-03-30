@@ -1,29 +1,29 @@
 <div class="text-center">
-  <img src="{{default_image.small_url}}" alt="plant-image" />
-
-  <p>Plant # {{id}}</p>
-  <p id="iDPlant" hidden="true">{{id}}</p>
-
-  <h2>{{common_name}}</h2>
-  <p id="commonName" hidden="true">{{common_name}}</p>
-
-  <p>This plant requires "{{watering}}" watering.</p>
-  <p id="waterInfo" hidden="true">{{watering}}</p>
-
-  <p>This plant requires "{{sunlight}}" sunlight.</p>
-  <p id="sunlightInfo" hidden="true">{{sunlight}}</p>
   <form id="addPlantProfile">
+    <img src="{{default_image.small_url}}" alt="plant-image" />
+
+    <p>Plant # {{id}}</p>
+    <p id="iDPlant" hidden="true">{{id}}</p>
+
+    <h2>{{common_name}}</h2>
+    <p id="commonName" hidden="true">{{common_name}}</p>
+
+    <p>This plant requires "{{watering}}" watering.</p>
+    <p id="waterInfo" hidden="true">{{watering}}</p>
+
+    <p>This plant requires "{{sunlight}}" sunlight.</p>
+    <p id="sunlightInfo" hidden="true">{{sunlight}}</p>
     <p>What name have you given me?</p>
     <input type="text" class="nick-name" id="nickPlant" placeholder="My Nickname?">
 
     <p>When did you last water me?</p>
-    <input type="text" class="plant-water" id="waterPlant" placeholder="Last Water?">
+    <input type="text" class="plant-water" id="waterPlant" placeholder="Last Water? MM/DD/YY">
 
     <p>When did you last give me food?</p>
-    <input type="text" class="plant-food" id="foodPlant" placeholder="Last Meal?">
+    <input type="text" class="plant-food" id="foodPlant" placeholder="Last Meal? MM/DD/YY">
 
     <p>When did you bring me home?</p>
-    <input type="text" class="plant-adopt" id="adoptPlant" placeholder="Adoption Date?">
+    <input type="text" class="plant-adopt" id="adoptPlant" placeholder="Adoption Date? MM/DD/YY">
 
     <div>
       {{!-- be able to save this to our profile. and store this data as our plant model.
