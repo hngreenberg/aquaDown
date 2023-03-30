@@ -4,40 +4,32 @@
   </div>
 </div>
 
-<div class="row mt-4">
-  <div class="col-md-6">
-    <h3>Create a New Project:</h3>
-
-    <form class="form new-project-form">
-      <div class="form-group">
-        <label for="project-name">project name:</label>
-        <input class="form-input" type="text" id="project-name" name="project-name" />
-      </div>
-      <div class="form-group">
-        <label for="project-funding">needed funding ($):</label>
-        <input class="form-input" type="number" id="project-funding" name="project-funding" />
-      </div>
-      <div class="form-group">
-        <label for="project-desc">description:</label>
-        <textarea class="form-input" id="project-desc" name="project-desc"></textarea>
-      </div>
-      <div class="form-group">
-        <button type="submit" class="btn btn-primary">Create</button>
-      </div>
-    </form>
-  </div>
-
-  {{#if projects.length}}
+<div>
+  {{#if plant.length}}
   <div class="col-md-6 project-list">
-    <h3>Current Projects:</h3>
+    <h3>My Current Plants:</h3>
 
-    {{#each projects as |project|}}
-    <div class="row mb-2">
-      <div class="col-md-8">
-        <h4><a href="/project/{{project.id}}">{{project.name}}</a></h4>
+    <!-- Loop over each object in the plants array -->
+    {{#each plants as |plant| }}
+    <div class="row mb-4 plant">
+      <div class="col-md-5">
+        <h2>
+          {{{get_emoji}}}
+          {{!-- when i click on the plant nickname, i want to go to the plant.handlebar with the plant.id --}}
+          <a href="/plant/{{plant.id}}">{{plant.nickname}}</a>
+        </h2>
+        <p>This plant was last watered on: {{format_date plant.date_lastwatered}}</p>
+        <p>This plant last had plant food on: {{format_date plant.date_lastfed}}</p>
+        <p>I got this plant on: {{format_date plant.date_acquired}}</p>
       </div>
-      <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{project.id}}">DELETE</button>
+      <div class="col-md-7">
+        <h3>Commonly Known Name: {{plant.common_name}}</h3>
+        <p> <span>☀️</span>
+          Amount of Sunlight needed: {{plant.sunlight}}</p>
+        <p> <span>💦</span>
+          Amount of Water needed: {{plant.watering}}</p>
+        {{!-- i want this button to delete the plant --}}
+        <button class="btn btn-sm btn-danger" data-id="{{plant.id}}">KILL ME!</button>
       </div>
     </div>
     {{/each}}

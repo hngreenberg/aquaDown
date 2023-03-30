@@ -1,8 +1,16 @@
 {{#each data}}
-<div>
-    <h2>{{common_name}}</h2>
-    <p>This plant requires "{{watering}}" watering.</p>
-    <p>This plant requires "{{sunlight}}" sunlight.</p>
-    <img="{{default_image}}">
+
+<div class="row mb-4">
+    <div class="col-md-3">
+        <img src="{{default_image.thumbnail}}" alt="plant-image" />
+    </div>
+    <div class="col-md-6">
+        <button class="plantInfo">{{common_name}}</button>
+        <p class="thisPlantID" hidden="true">{{id}}</p>
+        <br>
+        <p>This plant requires "{{watering}}" watering.</p>
+        <p>This plant requires "{{sunlight}}" sunlight.</p>
+    </div>
 </div>
+
 {{/each}}
