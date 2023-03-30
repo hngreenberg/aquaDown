@@ -8,7 +8,6 @@ Plant.init(
   {
     id: { // from api
       type: DataTypes.INTEGER,
-      autoIncrement: true,
       allowNull: false,
       primaryKey: true
     },
@@ -16,7 +15,7 @@ Plant.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    nickname: { // from user
+    watering: { // from api
       type: DataTypes.STRING,
       allowNull: true
     },
@@ -24,13 +23,9 @@ Plant.init(
       type: DataTypes.STRING,
       allowNull: true
     },
-    watering: { // from api
+    nickname: { // from user
       type: DataTypes.STRING,
       allowNull: true
-    },
-    date_acquired: { // from user
-      type: DataTypes.DATE,
-      allowNull: true,
     },
     date_lastwatered: { // from user
       type: DataTypes.DATE,
@@ -39,6 +34,10 @@ Plant.init(
     date_lastfed: { // from user
       type: DataTypes.DATE,
       allowNull: true
+    },
+    date_acquired: { // from user
+      type: DataTypes.DATE,
+      allowNull: true,
     },
     user_id: {
       type: DataTypes.INTEGER,

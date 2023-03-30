@@ -12,9 +12,26 @@ router.get("/search", async (req, res) => {
     const response = await fetch('https://perenual.com/api/species-list?page=1&key=' + process.env.API_KEY + '&q=' + plantSearch)
 
     const plantData = await response.json();
-    console.log(plantData)
     res.render("results", plantData)
-    // res.json(plantData); 
+    console.log(plantData)
+
+  } catch (err) {
+    res.status(500).json(err);
+  }
+})
+
+router.get("/plant/:id", async (req, res) => {
+
+  const plantID = req.params.id
+  console.log(plantID)
+  try {
+
+    const response = await fetch('https://perenual.com/api/species/details/' + plantID + '?key=' + process.env.API_KEY)
+
+    const plantLookup = await response.json();
+    console.log(plantLookup);
+    res.render("plant", plantLookup)
+
   } catch (err) {
     res.status(500).json(err);
   }
@@ -58,10 +75,10 @@ router.get('/plant/:id', async (req, res) => {
 
     const plant = plantData.get({ plain: true });
 
-    //   res.render('plant', {
-    //     ...plant,
-    //     logged_in: req.session.logged_in
-    //   });
+    res.render('plant', {
+      ...plant,
+      logged_in: req.session.logged_in
+    });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -78,10 +95,10 @@ router.get('/profile', withAuth, async (req, res) => {
 
     const user = userData.get({ plain: true });
 
-    //   res.render('profile', {
-    //     ...user,
-    //     logged_in: true
-    //   });
+    res.render('profile', {
+      ...user,
+      logged_in: true
+    });
   } catch (err) {
     res.status(500).json(err);
   }

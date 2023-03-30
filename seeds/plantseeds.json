@@ -1,20 +1,20 @@
 [
     {
         "common_name": "rose",
-        "nickname": "Rambling Rose",
-        "sunlight": "true",
         "watering": "often",
-        "date_acquired": "07/12/2023",
+        "sunlight": "true",
+        "nickname": "Rambling Rose",
         "date_lastwatered": "07/12/2023",
-        "date_lastfed": "07/12/2023"
+        "date_lastfed": "07/12/2023",
+        "date_acquired": "07/12/2023"
     },
     {
         "common_name": "ivy",
-        "nickname": "Poison Ivy",
-        "sunlight": "true",
         "watering": "maximum",
-        "date_acquired": "01/12/2023",
+        "sunlight": "true",
+        "nickname": "Poison Ivy",
         "date_lastwatered": "01/12/2023",
-        "date_lastfed": "01/12/2023"
+        "date_lastfed": "01/12/2023",
+        "date_acquired": "01/12/2023"
     }
 ]
