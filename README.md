@@ -50,12 +50,15 @@ Overall, Aquadown is a powerful tool for anyone who wants to keep their plants h
 
 ## Contact
 
-If you would like to contribute or have any questions , please contact us at:
+If you would like to contribute or have any questions , please contact us through **GitHub**:
 
+<img src="public/images/GitHub.png"  width="20" height="20"> [Jr Li](https://github.com/NewJR666)
 
-<img src="public/images/icloud.jpg"  width="20" height="20"> [Email](mailto:moraadrian510@icloud.com)
+<img src="public/images/GitHub.png"  width="20" height="20"> [Tyler Dinslage](https://github.com/tylerdins88)
 
-<img src="public/images/GitHub.png"  width="20" height="20"> [GitHub](https://github.com/hngreenberg/aquaDown.git)
+<img src="public/images/GitHub.png"  width="20" height="20"> [Heather Greenberg](https://github.com/hngreenberg)
+
+<img src="public/images/GitHub.png"  width="20" height="20"> [Adrian Mora](mailto:moraadrian510@icloud.com)
 
 
 ## Acknowledgements
