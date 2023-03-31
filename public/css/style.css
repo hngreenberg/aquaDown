@@ -224,9 +224,9 @@ border-radius: 10px;
 #plantId-color:active {
   margin-left: 1px 1px 0;
   box-shadow: 1px 1px 3px 1px #f3f0f0;
-   border-radius: 5px;
-   padding: 5px;
-   background-color: rgba(249, 249, 249, 0.51);
+  border-radius: 5px;
+  padding: 5px;
+  background-color: rgba(249, 249, 249, 0.51);
 }
 
 .project-list {
