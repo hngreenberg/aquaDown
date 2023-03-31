@@ -1,6 +1,12 @@
-  <img src="public/images/Aquadown.png" alt="mappingDash" title="Aquadown"  height="250" width="100%"/>
+  <img src="public/images/Aquadown.png" alt="mappingDash" title="Aquadown"  height="250" width="100%"/> <br>
 
-# Aquadown
+<p align="center">
+    <img src="https://img.shields.io/badge/Javascript-yellow" />
+    <img src="https://img.shields.io/badge/express-orange" />
+    <img src="https://img.shields.io/badge/Sequelize-blue"  />
+    <img src="https://img.shields.io/badge/mySQL-blue"  />
+    <img src="https://img.shields.io/badge/dotenv-green" />
+</p>
 
 ## Table of Contents
 
@@ -19,15 +25,21 @@
     4. Share any other tips or guidance for others attempting this or something similar.
  -->
 
-### Built With
+## Built With
 
-<!-- TODO: List any MAJOR libraries/frameworks (e.g. React, Tailwind) with links to their homepages. -->
+1.  <img src="public/images/NODE.JS-logo.png"  width="25" height="20">   [nodeJS](https://nodejs.org/en/docs/)
+
+2.  <img src="public/images/sequelize-logo.png"  width="20" height="20">   [Sequelize](https://sequelize.org/)
+
+3.  <img src="public/images/mysql-workbench-icon.png"  width="25" height="20">   [mySql](https://www.mysql.com/about/legal/logos.html)
+
+4.   <img src="public/images/javascript.png"  width="20" height="20">   [JavaScript]()
+
+5. <img src="public//images/express.png"  width="20" height="20">   [Express](https://expressjs.com/)
 
 ## Features
 
-<!-- TODO: List what specific 'user problems' that this application solves. -->
-
- Aquadown:
+ **Aquadown:** <br>
 is a plant care application that helps users take care of their plants by providing them with accurate and timely information about watering and sun exposure. The app is designed to be user-friendly and intuitive, with features that allow users to search for a plant they have just purchased and get care instructions for that specific plant.
 Once users have found their plant in the app's database, they can input the date of the last time they watered and fed their plant. Aquadown will then remind them when it's time to water and feed their plant again . Wich is a feature that we will work on to soon incorporate into the application to further  help the user  maintain a healthy and thriving plant.
 In addition to its watering and feeding reminders, Aquadown also provides users with information on how much sunlight their plant needs. The app's database includes thousands of different plant species, making it a valuable resource for plant enthusiasts of all levels.
@@ -38,7 +50,16 @@ Overall, Aquadown is a powerful tool for anyone who wants to keep their plants h
 
 ## Contact
 
-<!-- TODO: Include icons and links to your RELEVANT, PROFESSIONAL 'DEV-ORIENTED' social media. LinkedIn and dev.to are minimum. -->
+If you would like to contribute or have any questions , please contact us through **GitHub**:
+
+<img src="public/images/GitHub.png"  width="20" height="20"> [Jr Li](https://github.com/NewJR666)
+
+<img src="public/images/GitHub.png"  width="20" height="20"> [Tyler Dinslage](https://github.com/tylerdins88)
+
+<img src="public/images/GitHub.png"  width="20" height="20"> [Heather Greenberg](https://github.com/hngreenberg)
+
+<img src="public/images/GitHub.png"  width="20" height="20"> [Adrian Mora](mailto:moraadrian510@icloud.com)
+
 
 ## Acknowledgements
 
