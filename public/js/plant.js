@@ -128,7 +128,10 @@ var slideshowImages = [
     "/images/slideshow/passion-fruit.jpeg",
     "/images/slideshow/pothos.jpeg",
     "/images/slideshow/succulents.jpeg",
-    "/images/slideshow/violet.jpeg"
+    "/images/slideshow/violet.jpeg",
+    "/images/slideshow/hydrangea.jpeg",
+    "/images/slideshow/shark-beak.jpeg",
+    "/images/slideshow/spider-plant.jpeg"
 ];
 var currentSlide = 0;
 
