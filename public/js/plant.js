@@ -2,8 +2,8 @@ var plantBtn = document.getElementById("plantBtn");
 var plantInfoBtns = document.querySelectorAll(".plantInfo");
 var addPlantProfile = document.querySelector("#addPlantProfile");
 var killedPlant = document.querySelector("#killME");
-var plantCare = document.querySelector("#careME");
-var updatePlant = document.querySelector("#updatePlant");
+var plantCare = document.querySelectorAll("#careME");
+var updatePlant = document.querySelectorAll("#updatePlant");
 
 function findPlants(event) {
     event.preventDefault();
@@ -66,8 +66,9 @@ addPlantProfile?.addEventListener("submit", addPlant); // search for form and su
 
 function carePlant() {
     const plantID = document.querySelector("#iDPlant").textContent;
+    const ID = document.querySelector("#iD").textContent;
     console.log(plantID)
-    document.location.href = "/update/" + plantID
+    document.location.href = "/update/" + plantID + "/" + ID
 }
 
 plantCare?.addEventListener("click", carePlant);
@@ -75,7 +76,7 @@ plantCare?.addEventListener("click", carePlant);
 const changePlant = async (event) => {
     event.preventDefault();
 
-    const plantID = document.querySelector("#iDPlant").textContent;
+    const plantID = document.querySelector("#iD").textContent;
     const nickname = document.querySelector("#nickPlant").value.trim();
     const plantWater = document.querySelector("#waterPlant").value.trim();
     const plantFood = document.querySelector("#foodPlant").value.trim();

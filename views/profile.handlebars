@@ -20,11 +20,12 @@
           {{!-- when i click on the plant nickname, i want to go to the plant.handlebar with the plant.id --}}
           <a id="plantId-color" href="/plant/{{plant.plant_id}}">{{plant.nickname}}</a>
           <p id="iDPlant" hidden="true">{{plant_id}}</p>
+          <p id="iD" hidden="true">{{id}}</p>
         </h2>
         <p>This plant was last watered on: {{plant.date_lastwatered}}</p>
         <p>This plant last had plant food on: {{plant.date_lastfed}}</p>
         <p>I got this plant on: {{plant.date_acquired}}</p>
-        <button id="careME" data-id="{{plant.id}}">Cared For!</button>
+        <button id="careME">Cared For!</button>
       </div>
       <div class="col-md-6">
         <h3>Commonly Known Name: {{plant.common_name}}</h3>

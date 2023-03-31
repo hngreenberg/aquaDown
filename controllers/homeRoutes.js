@@ -12,7 +12,7 @@ router.get("/search", async (req, res) => {
     const response = await fetch('https://perenual.com/api/species-list?page=1&key=' + process.env.API_KEY + '&q=' + plantSearch)
 
     const plantData = await response.json();
-    res.render("results", plantData)
+    res.render("results", { ...plantData, logged_in: req.session.logged_in })
     console.log(plantData)
 
   } catch (err) {
@@ -30,23 +30,23 @@ router.get("/plant/:id", async (req, res) => {
 
     const plantLookup = await response.json();
     console.log(plantLookup);
-    res.render("plant", plantLookup)
+    res.render("plant", { ...plantLookup, logged_in: req.session.logged_in })
 
   } catch (err) {
     res.status(500).json(err);
   }
 })
 
-router.get("/update/:id", async (req, res) => {
+router.get("/update/:plant_id/:id", async (req, res) => {
 
-  const plantID = req.params.id
+  const plantID = req.params.plant_id
   console.log(plantID)
   try {
     const response = await fetch('https://perenual.com/api/species/details/' + plantID + '?key=' + process.env.API_KEY)
 
     const plantLookup = await response.json();
     console.log(plantLookup);
-    res.render("update", plantLookup)
+    res.render("update", { ...plantLookup, id: req.params.id })
 
   } catch (err) {
     res.status(500).json(err);
