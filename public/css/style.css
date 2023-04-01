@@ -2,6 +2,7 @@
 :root {
   --primary-color: #1b89bc;
   --hover-color: #e3e60d;
+  --cursive-font: 'Lobster Two', cursive;
 }
 
 
@@ -51,9 +52,13 @@ header,
   border-radius: 10px;
   padding: 20px;
   width: 100%;
+  margin-top: 3vw;
+}
+
+#log-input{
+  width: 30vw;
 }
 /* end login template */
-
 /* ---- slide-show css ----*/
 .slide-back {
 background-color:#1b89bc;
@@ -135,6 +140,7 @@ border-radius: 10px;
   margin: 10px;
 }
 
+
 /* Profile.handlbars styles */
 #name-banner {
   background-color: var(--primary-color);
@@ -150,8 +156,10 @@ border-radius: 10px;
 .name-color {
   color: white;
   font-size: 4vw;
-  text-transform: uppercase;
   text-shadow: 1px 1px 2px #000;
+  font-family: var(--cursive-font);
+  text-transform: capitalize;
+  font-weight: bold;
 }
 
 #name-banner h2 {
@@ -197,6 +205,7 @@ border-radius: 10px;
   width: 70vw;
   background-color: white;
   margin-top: 50px;
+  margin-bottom: 30px;
 }
 
 #crrnt-plants-list {
@@ -210,14 +219,15 @@ border-radius: 10px;
 }
 
 #plantId-color {
+  font-size: 2.5vw;
   color: white;
   text-decoration: none;
   width: 50vw;
+  text-shadow: 2px 2px 5px #070707;
 }
 
 #plantId-color:hover {
   color: var(--hover-color);
-  font-size: 32px;
   text-shadow: 2px 2px 5px #070707, -2px -2px 20px #f8f5f5;
 }
 
@@ -279,6 +289,10 @@ input[type="submit"] {
   border-radius: 5px;
 }
 
+button:hover {
+  box-shadow: 0px 0px 10px 1px #f3f0f0;
+}
+
 /* Forms */
 form {
   margin-bottom: 20px;
@@ -290,14 +304,56 @@ label {
   margin-bottom: 5px;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-  width: 100%;
+
+input[type="date"] {
+  width: 30%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   margin-bottom: 10px;
+  font-size: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 53%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+#nickPlant {
+  width: 30%;
+}
+
+::-webkit-calendar-picker-indicator {
+	z-index: 1;
+  position: relative;
+  margin-right: 10px;
+}
+
+input[type=date]::-webkit-calendar-picker-indicator:hover {
+	color: rgb(242, 238, 10);
+  background-color: var(--hover-color);
+  border-radius: 5px;
+}
+
+#date-subm {
+  margin-top: 15px;
+  width: 18vw;
+}
+
+#date-subm:hover {
+  text-shadow: 2px 2px 5px black;
+  box-shadow: 0 0 20px rgba(250, 247, 247, 0.505);
+ transition:  0.5 ease-in;
+}
+
+#date-subm:active {
+color: var(--hover-color);
 }
 
 /* Tables */
