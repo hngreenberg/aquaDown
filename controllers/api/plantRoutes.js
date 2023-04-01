@@ -37,7 +37,6 @@ router.get('/:id', withAuth, async (req, res) => {
 router.post('/', withAuth, async (req, res) => {
   try {
     const newPlant = await Plant.create({
-
       ...req.body,
       user_id: req.session.user_id,
     })
@@ -55,8 +54,9 @@ router.put('/:id', withAuth, async (req, res) => {
   try {
     console.log(req.body)
     const plantData = await Plant.update(req.body, {
-      where: { id: req.params.plant_id },
+      where: { id: req.params.id },
     })
+    console.log(plantData)
     res.status(200).json(plantData);
   } catch (err) {
     console.log(err);
