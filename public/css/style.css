@@ -1,4 +1,3 @@
-
 :root {
   --primary-color: #1b89bc;
   --hover-color: #e3e60d;
@@ -55,15 +54,16 @@ header,
   margin-top: 3vw;
 }
 
-#log-input{
+#log-input {
   width: 30vw;
 }
+
 /* end login template */
 /* ---- slide-show css ----*/
 .slide-back {
-background-color:#1b89bc;
-box-shadow: 0 0 20px rgba(6, 91, 131, 30);
-border-radius: 10px;
+  background-color: #1b89bc;
+  box-shadow: 0 0 20px rgba(6, 91, 131, 30);
+  border-radius: 10px;
 
 }
 
@@ -96,9 +96,11 @@ border-radius: 10px;
   0% {
     box-shadow: 0 0 0 0 rgba(232, 233, 236, 0.5);
   }
+
   50% {
     box-shadow: 0 0 50px 15px rgba(19, 19, 20, 0.5);
   }
+
   100% {
     box-shadow: 0 0 0 0 rgb(231, 225, 225);
   }
@@ -123,7 +125,8 @@ border-radius: 10px;
 }
 
 /* plant.handlebars styles */
-#addPlantProfile {
+#addPlantProfile,
+#updatePlant {
   background-color: var(--primary-color);
   box-shadow: 0 0 10px rgba(2, 0, 0, 0.9);
   padding: 50px;
@@ -177,9 +180,11 @@ border-radius: 10px;
   0% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-6px);
   }
+
   100% {
     transform: translateY(1);
   }
@@ -330,13 +335,13 @@ input[type="password"] {
 }
 
 ::-webkit-calendar-picker-indicator {
-	z-index: 1;
+  z-index: 1;
   position: relative;
   margin-right: 10px;
 }
 
 input[type=date]::-webkit-calendar-picker-indicator:hover {
-	color: rgb(242, 238, 10);
+  color: rgb(242, 238, 10);
   background-color: var(--hover-color);
   border-radius: 5px;
 }
@@ -349,11 +354,11 @@ input[type=date]::-webkit-calendar-picker-indicator:hover {
 #date-subm:hover {
   text-shadow: 2px 2px 5px black;
   box-shadow: 0 0 20px rgba(250, 247, 247, 0.505);
- transition:  0.5 ease-in;
+  transition: 0.5 ease-in;
 }
 
 #date-subm:active {
-color: var(--hover-color);
+  color: var(--hover-color);
 }
 
 /* Tables */
@@ -422,6 +427,4 @@ footer {
 /* Buttons */
 .delete-button {
   background-color: #F44336;
-}
 
-/* finish */
