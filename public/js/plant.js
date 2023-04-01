@@ -2,8 +2,8 @@ var plantBtn = document.getElementById("plantBtn");
 var plantInfoBtns = document.querySelectorAll(".plantInfo");
 var addPlantProfile = document.querySelector("#addPlantProfile");
 var killedPlant = document.querySelector("#killME");
-var plantCare = document.querySelectorAll("#careME");
-var updatePlant = document.querySelectorAll("#updatePlant");
+var plantCare = document.querySelector("#careME");
+var updatePlant = document.querySelector("#updatePlant");
 
 function findPlants(event) {
     event.preventDefault();
