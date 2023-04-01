@@ -1,0 +1,48 @@
+<div class="row" id="name-banner">
+  <div class="col-auto">
+    <h2>Welcome, <span class="name-color">{{name}}</span><span class="bounce">!</span></h2>
+  </div>
+</div>
+
+<div id="crrnt-plants-list">
+  {{#if plants.length}}
+
+  <div class="col-md-6 project-list">
+    <h3 class="h3-color">My Current Plants:</h3>
+
+
+    <!-- Loop over each object in the plants array -->
+    {{#each plants as |plant| }}
+    <div class="row mb-10 plant">
+      <div class="col-md-6">
+        <h2>
+          {{{get_emoji}}}
+          {{!-- when i click on the plant nickname, i want to go to the plant.handlebar with the plant.id --}}
+          <a id="plantId-color" href="/plant/{{plant.plant_id}}">{{plant.nickname}}</a>
+          <p id="iDPlant" hidden="true">{{plant_id}}</p>
+          <p id="iD" hidden="true">{{id}}</p>
+        </h2>
+        <p>This plant was last watered on: {{plant.date_lastwatered}}</p>
+        <p>This plant last had plant food on: {{plant.date_lastfed}}</p>
+        <p>I got this plant on: {{plant.date_acquired}}</p>
+        <button id="careME">Cared For!</button>
+      </div>
+      <div class="col-md-6">
+        <h3>Commonly Known Name: {{plant.common_name}}</h3>
+        <p> <span>☀️</span>
+          Amount of Sunlight needed: {{plant.sunlight}}</p>
+        <p> <span>💦</span>
+          Amount of Water needed: {{plant.watering}}</p>
+        {{!-- i want this button to delete the plant --}}
+        <button class="btn btn-sm btn-danger" id="killME" data-id="{{plant.id}}">KILL ME!</button>
+      </div>
+      <div id="whiteline">
+        {{!-- white line seperator --}}
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+</div>
+
+<script src="./js/profile.js"></script>

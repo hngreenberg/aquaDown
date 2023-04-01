@@ -1,0 +1,32 @@
+<div class="text-center">
+  <form id="addPlantProfile">
+    <img id="plant-hndl-img" src="{{default_image.small_url}}" alt="plant-image" />
+
+    <p>Plant # {{id}}</p>
+    <p id="iDPlant" hidden="true">{{id}}</p>
+
+    <h2>{{common_name}}</h2>
+    <p id="commonName" hidden="true">{{common_name}}</p>
+
+    <p>This plant requires "{{watering}}" watering.</p>
+    <p id="waterInfo" hidden="true">{{watering}}</p>
+
+    <p>This plant requires "{{sunlight}}" sunlight.</p>
+    <p id="sunlightInfo" hidden="true">{{sunlight}}</p>
+    <p>What name have you given me?</p>
+    <input type="text" class="nick-name" id="nickPlant" placeholder="My Nickname?">
+
+    <p>When did you last water me?</p>
+    <input type="date" class="plant-water" id="waterPlant" placeholder="Last Water?">
+
+    <p>When did you last give me food?</p>
+    <input type="date" class="plant-food" id="foodPlant" placeholder="Last Meal?">
+
+    <p>When did you bring me home?</p>
+    <input type="date" class="plant-adopt" id="adoptPlant" placeholder="Adoption Date?">
+
+    <div>
+      <button id="date-subm" type="submit" class="btn btn-primary">Add Plant to my Profile!</button>
+    </div>
+  </form>
+</div>
