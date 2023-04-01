@@ -12,18 +12,27 @@
 
 - [Overview](#overview)
 - [Built With](#built-with)
+- [Lisence](#lisence)
 - [Features](#features)
 - [Contact](#contact)
-- [Acknowledgements](#acknowledgements)
 
 ## Overview
 
-<!-- TODO: Add a screenshot of the live project.
-    1. Link to a 'live demo.'
-    2. Describe your overall experience in a couple of sentences.
-    3. List a few specific technical things that you learned or improved on.
-    4. Share any other tips or guidance for others attempting this or something similar.
- -->
+<img src="public/images/Screenshot 2023-03-31 at 6.34.43 PM.png"  width="200" height="200">
+<br> 
+search area for plants search
+<img src="public/images/Screenshot 2023-03-31 at 6.35.05 PM.png"  width="200" height="200">
+<br>
+Plants results after name search.
+<br>
+
+<img src="public/images/screen2.png"  width="200" height="200"> 
+<br>
+Plants results after name search.
+<br>
+<img src="public/images/screen3.png"  width="200" height="200"> 
+<br>
+User profile with list of users saved plant.
 
 ## Built With
 
@@ -36,6 +45,14 @@
 4.   <img src="public/images/javascript.png"  width="20" height="20">   [JavaScript]()
 
 5. <img src="public//images/express.png"  width="20" height="20">   [Express](https://expressjs.com/)
+
+## Lisence
+
+![](https://img.shields.io/badge/License-GNU-red.svg) 
+
+Copyright © 2007 Free Software Foundation, Inc. <https://fsf.org/>
+
+Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed.
 
 ## Features
 
@@ -60,7 +77,6 @@ If you would like to contribute or have any questions , please contact us throug
 
 <img src="public/images/GitHub.png"  width="20" height="20"> [Adrian Mora](mailto:moraadrian510@icloud.com)
 
+**Thank You for your feedback!!**
 
-## Acknowledgements
-
-<!-- TODO: List any blog posts, tutorials or plugins that you may have used to complete the project. Only list those that had a significant impact. Obviously, we all 'Google' stuff while working on our things, but maybe something in particular stood out as a 'major contributor' to your skill set for this project. -->
+---
