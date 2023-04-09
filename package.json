@@ -1,7 +1,7 @@
 {
   "name": "aqua-down",
   "version": "1.0.0",
-  "description": "<img src=\"public/images/Aquadown.png\" alt=\"mappingDash\" title=\"Aquadown\"  height=\"250\" width=\"100%\"/>",
+  "description": "plant application",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
