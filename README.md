@@ -64,6 +64,7 @@ Another great feature of Aquadown is that it allows users to name their plants. 
 When the user  adds a new plant to the app, they can give it a unique name that is meaningful to the user. This can help  keep track of which plant is which, especially if you have multiple plants that are the same species. Naming your plants can also make caring for them feel more personal and enjoyable and is something the family can enjoy doing together.
 Overall, Aquadown is a powerful tool for anyone who wants to keep their plants healthy and thriving. Whether you're an experienced gardener or just starting out, this app can help you take better care of your plants and enjoy their beauty and benefits for years to come.
  
+ Please visit the app here: [https://aquadown.herokuapp.com/](https://aquadown.herokuapp.com/)
 
 ## Contact
 
